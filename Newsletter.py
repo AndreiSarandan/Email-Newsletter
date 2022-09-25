@@ -21,12 +21,12 @@ def send_email(user, pwd, recipient, subject, body):
         print("failed to send mail")
 
 
-user = 'newstester778@gmail.com'
-pwd = 'dtfhspgkytcvyxju' #
+user = 'newstester778@gmail.com' #gmail id
+pwd = 'dtfhspgkytcvyxju' #generated 'App-password'
 subject = 'Test email'
-with open('message.txt', 'r') as e:
-    text = e.readlines()
-with open('database.txt', 'r') as f:
+with open('message.txt', 'r') as e: #content of the message
+    text = e.readlines() 
+with open('database.txt', 'r') as f: # database containing all email ddresses
     recipient = [line.strip() for line in f]
 
 print(recipient)
